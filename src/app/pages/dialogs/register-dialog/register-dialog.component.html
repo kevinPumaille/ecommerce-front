@@ -1,0 +1,42 @@
+
+
+<p-dialog class="p-0" header="Header" [(visible)]="visibleRegistro" [modal]="true" [style]="{ 'width': '90vw', 'max-width': '30rem' }" [closable]="false"
+[dismissableMask]="true" [draggable]="false">
+<ng-template pTemplate="header">
+  <span class="text-xl font-bold">Registro</span>
+</ng-template>
+
+<form [formGroup]="formGroup">
+  <div class="p-2">
+    <input type="text" pInputText formControlName="nombres" placeholder="Nombres" class="w-full"/>
+  </div>
+
+  <div class="p-2">
+    <input type="text" pInputText formControlName="apellidos" placeholder="Apellidos" class="w-full"/>
+  </div>
+
+  <div class="p-2">
+    <input type="email" pInputText formControlName="correo" placeholder="ejemplo@gmail.com" class="w-full"/>
+  </div>
+
+  <div class="p-2">
+    <input type="tel" pInputText formControlName="celular" placeholder="Celular" class="w-full"/>
+  </div>
+
+  <div class="p-2">
+    <input type="password" pInputText formControlName="clave" placeholder="Contraseña" class="w-full"/>
+  </div>
+</form>
+
+<ng-template pTemplate="footer">
+  <div class="flex justify-end mt-4">
+    <div class="mr-2">
+      <p-button label="Cerrar" styleClass="p-button-danger p-button-text" (click)="onVisibleCambio(false)"></p-button>
+    </div>
+    <div>
+      <p-button label="Registrar" styleClass="p-button-secondary p-button-text" (click)="onVisibleCambio(false)"></p-button>
+    </div>
+  </div>
+</ng-template>
+
+</p-dialog>

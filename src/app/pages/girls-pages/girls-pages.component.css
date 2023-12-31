@@ -1,0 +1,4 @@
+.container-girls{
+    display: flex;
+    flex-wrap: wrap;
+  }

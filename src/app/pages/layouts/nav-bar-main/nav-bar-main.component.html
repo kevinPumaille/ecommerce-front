@@ -1,0 +1,60 @@
+<div class="example-container">
+    <mat-toolbar class="toolbar-container">
+
+        <button mat-icon-button class="mat-toolbar-example-icon" (click)="sidebarVisible1 = true">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <button mat-flat-button class="bradion favorite-icon" [routerLink]="['/']">
+            Bradion
+        </button>
+        <!-- <h2 class="bradion">Bradion</h2> -->
+        <span class="example-spacer"></span>
+
+
+        <div class="nav-container">
+            <a [routerLink]="['/mujeres']" class="nav-link">Mujeres</a>
+            <a [routerLink]="['/hombres']" class="nav-link">Hombres</a>
+            <a [routerLink]="['/niños']" class="nav-link">Niños</a>
+            <a [routerLink]="['/niñas']" class="nav-link">Niñas</a>
+        </div>
+
+
+
+
+        <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon favorite-icon"
+            aria-label="Example icon-button with heart icon">
+            <mat-icon>person</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="showDialogLogin()">Iniciar Sesión</button>
+            <button mat-menu-item (click)="showDialogRegistro()">Crear Cuenta</button>
+        </mat-menu>
+
+
+        <button mat-icon-button class="carrito" (click)="sidebarVisible = true">
+            <mat-icon class="carrito-icon">shopping_cart</mat-icon>
+            <span class="contador bg-red-500 text-xs rounded-full px-2">{{numeroDeProductos}}</span>
+        </button>
+
+    </mat-toolbar>
+</div>
+
+<p-sidebar [(visible)]="sidebarVisible1" position="left" >
+    <div class="flex flex-col items-center text-center">
+        <a [routerLink]="['/mujeres']" class="nav-link-sidebar">Mujeres</a>
+        <a [routerLink]="['/hombres']" class="nav-link-sidebar">Hombres</a>
+        <a [routerLink]="['/niños']" class="nav-link-sidebar">Niños</a>
+        <a [routerLink]="['/niñas']" class="nav-link-sidebar">Niñas</a>
+    </div>
+</p-sidebar>
+
+
+<p-sidebar [(visible)]="sidebarVisible" position="right" class="bg-red-500" >
+    <app-carrito></app-carrito>
+</p-sidebar>
+
+
+<app-login-dialog [visibleLogin]="visibleLogin" (visibleCambioLogin)="onVisibleCambioLogin($event)"></app-login-dialog>
+
+<app-register-dialog [visibleRegistro]="visibleRegistro" (visibleCambioRegistro)="onVisibleCambioregistro($event)"></app-register-dialog>

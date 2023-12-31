@@ -1,0 +1,9 @@
+<app-nav-bar-main></app-nav-bar-main>
+
+<div class="flex flex-wrap justify-center">
+    <app-product-card *ngFor="let producto of productos" 
+        [producto]="producto"
+        [predeterminado]="'predeterminado'"
+        class="m-4 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
+    ></app-product-card>
+</div>

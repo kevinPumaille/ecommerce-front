@@ -1,0 +1,44 @@
+<!-- <div class="container">
+  <h3>Iniciar Sesión</h3>
+  <div class="input-login">
+    <input type="text" placeholder="ejemplo@gmail.com">
+  </div>
+  
+  <div class="input-login">
+    <input type="password" placeholder="contraseña">
+  </div>
+
+  <div class="btn-entrar">
+    <button>Entrar</button>
+  </div>
+  
+</div> -->
+
+<p-dialog class="p-0" header="Header" [(visible)]="visibleLogin" [modal]="true" [style]="{ 'width': '80vw', 'max-width': '30rem' }" [closable]="false"
+  [dismissableMask]="true" [draggable]="false">
+  <ng-template pTemplate="header">
+    <span class="text-xl font-bold">Iniciar Sesión</span>
+  </ng-template>
+
+  <form [formGroup]="formGroup">
+    <div class="p-2">
+      <input type="text" pInputText formControlName="correo" placeholder="Correo" class="w-full"/>
+    </div>
+
+    <div class="p-2">
+      <input type="password" pInputText formControlName="clave" placeholder="Contraseña" class="w-full"/>
+    </div>
+  </form>
+
+  <ng-template pTemplate="footer">
+    <div class="flex justify-end mt-4">
+      <div class="mr-2">
+        <p-button label="Cerrar" styleClass="p-button-danger p-button-text" (click)="onVisibleCambio(false)"></p-button>
+      </div>
+      <div>
+        <p-button label="Ingresar" styleClass="p-button-secondary p-button-text" (click)="onVisibleCambio(false)"></p-button>
+      </div>
+    </div>
+  </ng-template>
+  
+</p-dialog>

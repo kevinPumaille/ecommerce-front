@@ -1,0 +1,44 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+  }
+  
+  h3{
+    padding: 10px;
+    font-size: 1.5em;
+  }
+  
+  .input-login input{
+    width: 100%;
+    padding: 1em;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: hsla(0, 41%, 90%, 0.465);
+    margin-bottom: .8em;
+    box-sizing: border-box;
+  }
+  
+  .btn-entrar {
+    margin-left: auto; /* Mueve el botón hacia la derecha utilizando flexbox */
+  }
+  
+  .btn-entrar button{
+    padding: 8px 21px;
+    background-color: #D8D8D5;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1em;
+  }
+  
+  .btn-entrar button:hover{
+    background-color: rgba(174, 144, 144, 0.61);
+  }
+  
+  .btn-entrar button:active{
+    transform: scale(0.97);
+    transform-origin: center; /* Establece el punto central como origen de la transformación */
+    
+  }

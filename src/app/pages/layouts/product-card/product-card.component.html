@@ -1,0 +1,53 @@
+<div *ngIf="predeterminado=='predeterminado'">
+  <mat-card class="product-card">
+    <!-- Imagen del producto -->
+    <img mat-card-image src="https://picsum.photos/100/100?random" alt="Imagen del producto">
+  
+    <mat-card-content>
+      <!-- Título del producto -->
+      <div class="product-title">{{producto.nombreProducto}}</div>
+    </mat-card-content>
+  
+    <mat-card-actions class="card-action">
+        <!-- Precio del producto -->
+      <div class="product-price">${{producto.precioProducto}}</div>
+      <!-- Botón de agregar -->
+      <button mat-raised-button color="primary" (click)="onClick(producto)">
+        <mat-icon>add</mat-icon>
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+
+
+
+
+<div *ngIf="predeterminado=='carritoMain'">
+
+  <div class="flex flex-col mb-2">
+
+    <div class="flex justify-between">
+      <p class="">{{producto.nombreProducto}}</p>
+      <p class="">${{producto.precioTotal}}</p> 
+    </div>
+
+    <div class="flex items-center">
+      <div>
+        <img mat-card-image src="https://picsum.photos/100/100?random" alt="Imagen del producto">
+      </div>   
+
+      <div class="flex items-center">
+        <p-button icon="pi pi-plus" styleClass="p-button-rounded p-button-text" (onClick)="sumarProducto()"></p-button>
+        <p>{{producto.cantidadProducto}}</p>
+        <p-button icon="pi pi-minus" styleClass="p-button-rounded p-button-text" (onClick)="restarProducto()"></p-button>
+      </div>  
+
+      <p-button icon="pi pi-trash" styleClass="p-button-rounded p-button-text" (onClick)="eliminarProducto()"></p-button>
+    </div>
+    
+  </div>
+
+  
+</div>

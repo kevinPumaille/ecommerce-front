@@ -1,0 +1,175 @@
+<app-nav-bar-main></app-nav-bar-main>
+
+<div class="card">
+    <p-carousel 
+        [value]="carousel" 
+        [numVisible]="3" 
+        [numScroll]="3" 
+        [circular]="true" 
+        [responsiveOptions]="responsiveOptions" 
+        [autoplayInterval]="3000">
+        <ng-template let-item pTemplate="item">
+            <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                <div class="mb-3">
+                    <img [src]="item" alt="carousel-item" class="w-100 shadow-2" />
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>
+
+<h2 class="categoria-titulo">Categorias</h2>
+
+<div class="flex flex-wrap justify-center text-center">
+  
+    <div class="p-8 lg:w-1/4 md:w-1/2 sm:w-full">
+      <button class="relative w-full h-full p-0 border-none bg-transparent transition-opacity duration-300 ease-in-out hover:opacity-75" onclick="tuFuncion()">
+        <img src="../../../assets/categorias/botines.webp" alt="" class="w-full h-auto">
+      </button>
+      <p class="text-center mt-4">Botines</p>
+    </div>
+  
+    <div class="p-8 lg:w-1/4 md:w-1/2 sm:w-full">
+      <button class="relative w-full h-full p-0 border-none bg-transparent transition-opacity duration-300 ease-in-out hover:opacity-75" onclick="tuFuncion()">
+        <img src="../../../assets/categorias/sandalias.webp" alt="" class="w-full h-auto">
+      </button>
+      <p class="text-center mt-4">Sandalias</p>
+    </div>
+  
+    <div class="p-8 lg:w-1/4 md:w-1/2 sm:w-full">
+      <button class="relative w-full h-full p-0 border-none bg-transparent transition-opacity duration-300 ease-in-out hover:opacity-75" onclick="tuFuncion()">
+        <img src="../../../assets/categorias/zapatillas.webp" alt="" class="w-full h-auto">
+      </button>
+      <p class="text-center mt-4">Zapatillas</p>
+    </div>
+  
+    <div class="p-8 lg:w-1/4 md:w-1/2 sm:w-full">
+      <button class="relative w-full h-full p-0 border-none bg-transparent transition-opacity duration-300 ease-in-out hover:opacity-75" onclick="tuFuncion()">
+        <img src="../../../assets/categorias/zapatos.webp" alt="" class="w-full h-auto">
+      </button>
+      <p class="text-center mt-4">Zapatos</p>
+    </div>
+  
+  </div>
+  
+
+<div class="flex justify-center p-8">
+    <img src="../../../assets/carrousel3.webp" alt="">
+</div>
+
+<div class="flex flex-wrap">
+
+    <!-- Item 1 -->
+    <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/4 text-center p-8" [style]="{ 'background-color': '#FFD700'}">
+        <div class="flex justify-center h-24">
+            <img src="../../../assets/store.png" alt="">
+        </div>
+        <h5 class="text-sm font-bold p-8">Footloose Sostenible</h5>
+        <p>Compra online y recoge en la tienda más cercana a ti.</p>
+        <p>¡Ver tiendas!</p>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/4 text-center p-8" [style]="{ 'background-color': '#FFD700'}">
+        <div class="flex justify-center h-24">
+            <img src="../../../assets/boleta.png" alt="">
+        </div>
+        <h5 class="text-sm font-bold p-8">Revisa tu boleta</h5>
+        <p>Consulta y descarga tu boleta o factura fácilmente.</p>
+        <p>¡Ver tiendas!</p>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/4 text-center p-8" [style]="{ 'background-color': '#FFD700'}">
+        <div class="flex justify-center h-24">
+            <img src="../../../assets/seguimiento.png" alt="">
+        </div>
+        <h5 class="text-sm font-bold p-8">Seguimiento de pedidos</h5>
+        <p>¡Rastrea tu pedido con tu número de orden sin preocupaciones!</p>
+        <p>¡Ver tiendas!</p>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/4 text-center p-8" [style]="{ 'background-color': '#FFD700'}">
+        <div class="flex justify-center h-24">
+            <img src="../../../assets/sostenible.png" alt="">
+        </div>
+        <h5 class="text-sm font-bold p-8">Footloose Sostenible</h5>
+        <p>Únete a nuestro proyecto y construyamos un mejor futuro.</p>
+        <p>¡Ver tiendas!</p>
+    </div>
+
+</div>
+
+<div class="flex justify-center p-8">
+    <img src="../../../assets/carousel8.webp" alt="">
+</div>
+
+<h2 class="categoria-titulo">Nuestras marcas</h2>
+
+<div class="card">
+    <p-carousel 
+        [value]="carouselMarcas" 
+        [numVisible]="5" 
+        [numScroll]="3" 
+        [circular]="true" 
+        [autoplayInterval]="5000"
+        [responsiveOptions]="responsiveOptions2"
+        class="sm:w-full md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2"
+    >
+        <ng-template let-item pTemplate="item">
+            <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                <div class="mb-3">
+                    <img [src]="item" alt="carousel-item" class="w-100 shadow-2" />
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>
+
+
+<footer class="bg-slate-800 text-white p-8 sm:p-12 md:p-16 lg:p-20 xl:p-28" [style]="{ 'background-color': '#FFD700'}">
+    <div class="flex flex-wrap justify-between">
+        <div class="w-full sm:w-1/2 lg:w-1/4 xl:w-1/4">
+            <h1>Sobre Bradion</h1>
+            <p>¿Quiénes somos?</p>
+            <p>Nuestra Bradion</p>
+            <p>Catálogo Bradion</p>
+            <p>Catálogo Bradion</p>
+            <p>Catálogo Bradion</p>
+        </div>
+    
+        <div class="w-full sm:w-1/2 lg:w-1/4 xl:w-1/4 mt-4 sm:mt-0">
+            <h1>Contactanos</h1>
+            <p>Calle Vulcano 000 Ate, Lima-Peru</p>
+            <p>atencionalcliente@example.com.pe</p>
+            <p>01 074024002</p>
+            <p>Lunes a Sábado de 9am - 8pm</p>
+        </div>
+    
+        <div class="w-full sm:w-1/2 lg:w-1/4 xl:w-1/4 mt-4 sm:mt-0">
+            <h1>MEDIOS DE PAGO</h1>
+            <div class="flex flex-wrap">
+                <div class="h-7 m-3">
+                    <img src="../../../assets/medios de pago/americanMethodFooter.png" alt="" class="h-full">
+                </div>
+                <div class="h-7 m-3">
+                    <img src="../../../assets/medios de pago/dinnersMethodFooter.png" alt="" class="h-full">
+                </div>
+                <div class="h-7 m-3">
+                    <img src="../../../assets/medios de pago/mastercardMethodFooter.png" alt="" class="h-full">
+                </div>
+                <div class="h-7 m-3">
+                    <img src="../../../assets/medios de pago/pagoEfectivoMethodFooter.png" alt="" class="h-full">
+                </div>
+                <div class="h-7 m-3">
+                    <img src="../../../assets/medios de pago/visaMethodFooter.png" alt="" class="h-full">
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="mt-8">
+    <p class="text-center mt-8">©2023 copyright Bradion</p>
+</footer>
+
+

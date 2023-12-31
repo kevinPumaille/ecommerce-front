@@ -1,0 +1,102 @@
+.toolbar-container {
+    background-color: rgb(255, 255, 255);
+
+}
+
+.bradion {
+    font-weight: bold;
+    font-size: 2em;
+    background-color: blue;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mat-toolbar-example-icon {
+    display: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    padding: 1px 15px;
+    color: #725151;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.nav-link-sidebar{
+    width: 100%;
+    text-decoration: none;
+    padding: 20px;
+    color: #725151;
+    font-weight: bold;
+    
+}
+
+.nav-link:hover {
+    background-color: rgba(198, 134, 134, 0.092);
+}
+
+.nav-link-sidebar:hover {
+    background-color: rgba(198, 134, 134, 0.092);
+}
+
+/* Media query para ajustar el diseño en dispositivos más pequeños */
+@media screen and (max-width: 900px) {
+    .nav-container {
+        display: none;
+        /* Cambiar a una columna en dispositivos más pequeños */
+    }
+
+    .nav-link {
+        margin-right: 0;
+        /* Eliminar el margen derecho en dispositivos más pequeños */
+        margin-bottom: 5px;
+        /* Añadir margen inferior entre enlaces en dispositivos más pequeños */
+    }
+
+    .mat-toolbar-example-icon {
+        display: block;
+    }
+}
+
+/*  Numero Carrito */
+
+.carrito {
+    position: relative;
+    display: inline-block;
+}
+
+.carrito-icon {
+    font-size: 24px;
+    /* Tamaño del icono de carrito (ajústalo según tus necesidades) */
+}
+
+.contador {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    /* Ajusta el espaciado del contador según tus necesidades */
+    font-size: 10px;
+    /* Tamaño del texto del contador */
+}

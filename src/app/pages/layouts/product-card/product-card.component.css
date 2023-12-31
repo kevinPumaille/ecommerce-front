@@ -1,0 +1,28 @@
+/* Carrito PREDETERMIANDO */
+
+.product-card {
+    width: 15em; /* Ancho deseado para la tarjeta */
+    margin: 1em; /* Márgenes externos */
+  }
+  
+  .product-title {
+    font-size: 1.1em;
+    padding: 0.5em;
+    font-weight: bold;    
+  }
+  
+  .product-price {
+    font-size: 1em;
+  }
+  
+  /* Puedes ajustar los estilos según tus necesidades */
+  .card-action{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Carrito MAIN */
+
+  p{
+    margin: 0px;
+  }

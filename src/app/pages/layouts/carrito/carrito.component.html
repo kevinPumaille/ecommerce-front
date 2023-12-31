@@ -1,0 +1,27 @@
+<div class="sideNav-Shopping">
+
+    <h3 class="titulo-carrito">Carrito</h3>
+
+    <div class="products-shopping">
+      <p [hidden]="!cerrarPedido" class="carrito-vacio">carrito vacio</p>
+
+      <app-product-card
+        [predeterminado]="'carritoMain'"
+        *ngFor="let producto of productos"
+        [producto]="producto"
+      ></app-product-card>
+
+    </div>
+
+    <div [hidden]="cerrarPedido">
+      <div class="total-pedido">
+        <p>Total</p>
+        <p>{{precioTotalCarrito}}</p>
+      </div> 
+    </div>
+
+    <div class="boton-seguirComprando">
+      <button mat-raised-button color="primary" [hidden]="cerrarPedido" [routerLink]="['/carrito']">Cerrar pedido</button>      
+    </div>
+    
+  </div>

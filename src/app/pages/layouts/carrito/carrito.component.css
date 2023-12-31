@@ -1,0 +1,54 @@
+
+/*  SideNav Carrito */
+
+.content-sidenav{
+    height: 100vh;
+  }
+  
+  .sideNav-Shopping{
+    display: flex;
+    flex-direction: column;
+    
+    
+  }
+  
+  .titulo-carrito{
+    display: flex;
+    
+    font-size: 2em;
+    /* background-color: green; */
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .products-shopping{
+    /* background-color: blueviolet; */
+    overflow: auto;
+  }
+  
+  .carrito-vacio{
+    color: grey;
+  }
+  
+  .products-shopping{
+    height: 35em;
+    text-align: center;
+  }
+  
+  .total-pedido{
+    display: flex;
+    
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(203, 192, 192, 0.168);
+  }
+  
+  .boton-seguirComprando{
+    display: flex;
+    
+    gap: 5px;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+  
