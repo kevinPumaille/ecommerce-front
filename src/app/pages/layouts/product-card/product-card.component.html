@@ -1,7 +1,7 @@
 <div *ngIf="predeterminado=='predeterminado'">
   <mat-card class="product-card">
     <!-- Imagen del producto -->
-    <img mat-card-image src="https://picsum.photos/100/100?random" alt="Imagen del producto">
+    <img mat-card-image [src]="producto.urlImagen" alt="Imagen del producto">
   
     <mat-card-content>
       <!-- Título del producto -->
@@ -35,7 +35,7 @@
 
     <div class="flex items-center">
       <div>
-        <img mat-card-image src="https://picsum.photos/100/100?random" alt="Imagen del producto">
+        <img mat-card-image [src]="producto.urlImagen" alt="Imagen del producto">
       </div>   
 
       <div class="flex items-center">

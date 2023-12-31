@@ -70,9 +70,9 @@ export class CarritoService {
       this._productos.next(this.carritoProductos);
       const nuevoPrecioTotal = this.calcularPrecioTotal();
       this._precioTotal.next(nuevoPrecioTotal);
-      console.log(`Se ha modificado la cantidad del producto con ID.`);
+      //console.log(`Se ha modificado la cantidad del producto con ID.`);
     } else {
-      console.log(`No se encontró un producto con ID`);
+      //console.log(`No se encontró un producto con ID`);
     }
 
     this._productos.next(this.carritoProductos);
@@ -94,14 +94,14 @@ export class CarritoService {
         const index = this.carritoProductos.indexOf(productoEncontrado);
         if (index !== -1) {
           this.carritoProductos.splice(index, 1);
-          console.log(`El producto con ID ${idProducto} ha sido eliminado del carrito.`);
+          //console.log(`El producto con ID ${idProducto} ha sido eliminado del carrito.`);
         }
       }
 
       this._productos.next(this.carritoProductos);
       this._precioTotal.next(nuevoPrecioTotal);
     } else {
-      console.log(`No se encontró un producto con ID`);
+      //console.log(`No se encontró un producto con ID`);
     }
 
     this._productos.next(this.carritoProductos);
@@ -114,7 +114,7 @@ export class CarritoService {
           
           this._productos.next(this.carritoProductos);
           this._precioTotal.next(this.calcularPrecioTotal());
-          console.log(`Precio actual: ${this._productos}`);
+          //console.log(`Precio actual: ${this._productos}`);
         }
   }
 }

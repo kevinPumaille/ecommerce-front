@@ -22,7 +22,7 @@ export class CarritoComponent {
     this.carritoService.productos.subscribe( prod => {
       this.productos = prod;
       this.cerrarPedido = prod.length==0 ? true:false;
-      console.log(prod)
+      //console.log(prod)
     });
 
     this.carritoService.precioTotal$.subscribe(precioTotal => {

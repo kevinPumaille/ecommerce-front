@@ -11,9 +11,9 @@ import { Producto } from 'src/app/models/Producto';
 export class HombresPagesComponent {
 
   productos: Producto[] = [
-    { idProducto: 7, nombreProducto: 'Camiseta', precioProducto: 20 },
-    { idProducto: 8, nombreProducto: 'Pantalón', precioProducto: 30 },
-    { idProducto: 9, nombreProducto: 'Zapatos', precioProducto: 50 }
+    { idProducto: 7, nombreProducto: 'Zapatos Casuales', precioProducto: 20,urlImagen:"../../../../assets/productos/zapatos_casuales.jpg" },
+    { idProducto: 8, nombreProducto: 'Zapatos de vestir', precioProducto: 30,urlImagen:"../../../../assets/productos/zapatos_de_vestir.jpg" },
+    { idProducto: 9, nombreProducto: 'Botas', precioProducto: 50,urlImagen:"../../../../assets/productos/botas.jpg" }
   ];
   
 }

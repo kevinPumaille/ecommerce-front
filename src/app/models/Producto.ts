@@ -4,4 +4,5 @@ export class Producto{
     precioProducto: number;
     cantidadProducto?: number;
     precioTotal?: number;
+    urlImagen?: string;
 }
